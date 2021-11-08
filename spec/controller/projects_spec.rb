@@ -1,6 +1,7 @@
 require "rails_helper"
 
 RSpec.describe ProjectsController, type: :controller do
+  # ensures that the GET method on a project index returns correctly
   context "GET #index" do
     it "returns a success response" do
       get :index
@@ -9,6 +10,7 @@ RSpec.describe ProjectsController, type: :controller do
     end
   end
 
+  # ensures that the GET method on a project show with id returns correctly
   context "GET #show" do
     let!(:project) { Project.create(title: "Test title", description: "Test description") }
     it "returns a success response" do
