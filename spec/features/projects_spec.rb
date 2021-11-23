@@ -3,6 +3,8 @@ require 'rails_helper'
 RSpec.feature "Projects", type: :feature do
   context "Create new project" do
     before(:each) do
+      user = FactoryBot.create(:user)
+      login_as(user)
       # navigates to create project link and populates title box with 'Test title'
       visit new_project_path
       within("form") do
@@ -30,6 +32,8 @@ RSpec.feature "Projects", type: :feature do
     # initilaizes project and navigaes to the edit project link
     let(:project) { Project.create(title: "Test title", description: "Test content") }
     before(:each) do
+      user = FactoryBot.create(:user)
+      login_as(user)
       visit edit_project_path(project)
     end
 
@@ -60,6 +64,8 @@ RSpec.feature "Projects", type: :feature do
     # is zero
     let!(:project) { Project.create(title: "Test title", description: "Test content") }
     scenario "remove project" do
+      user = FactoryBot.create(:user)
+      login_as(user)
       visit projects_path
       click_link "Destroy"
       expect(page).to have_content("Project was successfully destroyed")
