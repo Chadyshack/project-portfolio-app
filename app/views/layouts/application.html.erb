@@ -9,6 +9,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
     <div>
+      <p>
       <% if user_signed_in? %>
         Hello there, <i><%= current_user.email %></i>
         <%= link_to 'Edit Account', edit_user_registration_path %> |
