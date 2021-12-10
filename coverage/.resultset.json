@@ -5,10 +5,11 @@
         "lines": [
           1,
           1,
+          1,
           null,
           null,
           1,
-          4,
+          8,
           null,
           null,
           null,
@@ -87,13 +88,6 @@
           null
         ]
       },
-      "/root/project-portfolio-app/app/models/application_record.rb": {
-        "lines": [
-          1,
-          1,
-          null
-        ]
-      },
       "/root/project-portfolio-app/app/channels/application_cable/channel.rb": {
         "lines": [
           0,
@@ -138,6 +132,27 @@
         "branches": {
         }
       },
+      "/root/project-portfolio-app/app/models/user.rb": {
+        "lines": [
+          0,
+          null,
+          null,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/root/project-portfolio-app/app/models/application_record.rb": {
+        "lines": [
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
       "/root/project-portfolio-app/app/mailers/application_mailer.rb": {
         "lines": [
           0,
@@ -149,6 +164,6 @@
         }
       }
     },
-    "timestamp": 1636579232
+    "timestamp": 1637660006
   }
 }

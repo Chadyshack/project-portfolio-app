@@ -64,6 +64,8 @@ group :test do
   gem 'chromedriver-helper'
   # Simple coverage
   gem 'simplecov', require: false
+  # Factory Bot
+  gem 'factory_bot_rails'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -71,7 +73,10 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Iteration 4: Testing Rails with RSpec
 gem 'mini_racer'
-  
+
+# Iteration 5 Version 2: User Authentication
+gem 'devise'
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.7'
 end
