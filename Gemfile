@@ -77,6 +77,10 @@ gem 'mini_racer'
 # Iteration 5 Version 2: User Authentication
 gem 'devise'
 
+# Iteration 6: Add Style
+gem 'bootstrap', '~> 4.6.1'
+gem 'jquery-rails'
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.7'
 end

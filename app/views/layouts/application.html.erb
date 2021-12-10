@@ -1,25 +1,47 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ProjectPortfolioApp</title>
+    <title>Project Portfolio App</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-    <div>
-      <p>
-      <% if user_signed_in? %>
-        Hello there, <i><%= current_user.email %></i>
-        <%= link_to 'Edit Account', edit_user_registration_path %> |
-        <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-      <% else %>
-        <%= link_to "Create Account", new_user_registration_path %> |
-        <%= link_to "Login", new_user_session_path %>
-      <% end %>
-      </p>
-    </div>
+    <!-- From: https://getbootstrap.com/docs/4.0/examples/jumbotron/ -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="jumbotron.css" rel="stylesheet">
+
+    <!-- From: https://getbootstrap.com/docs/4.0/examples/jumbotron/ (modified) -->
+    <nav class="navbar navbar-expand-md navbar-light bg-primary">
+      <a class="navbar-brand" href="/">Portfolio Project</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <% if user_signed_in? %>
+              <div class="nav-item navbar-text text-light">Hello there, <i><%= current_user.email %></i></div>
+            <% else %>
+              <%= link_to "Create Account", new_user_registration_path, class: "nav-item nav-link" %>
+            <% end %>
+          </li>
+          <li class="nav-item active">
+            <% if user_signed_in? %>
+              <%= link_to 'Edit Account', edit_user_registration_path, class: "nav-item nav-link" %>
+            <% end %>
+          </li>
+          <li class="nav-item active">
+            <% if user_signed_in? %>
+              <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "nav-item nav-link" %>
+            <% else %>
+              <%= link_to "Login", new_user_session_path, class: "nav-item nav-link" %>
+            <% end %>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
   </head>
 
   <body>
